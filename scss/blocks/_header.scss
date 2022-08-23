@@ -1,0 +1,95 @@
+@import "./mixses";
+.site-header{
+    padding: 19px 0 30px 0;
+}
+.center{
+    @include center(space-between);
+}
+.header__link{
+    display: inline-block;
+    text-decoration: none;
+    @include center (none);
+}
+.header__link-images{
+    display: inline-block;
+}
+.header__link-span{
+    display: inline-block;
+    padding-left: 16px;
+    @include text (700,28px,30px);
+    color: var(--logo-color);
+}
+.header__list{
+    @include center (space-between);
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.header__list-item-link{
+    text-decoration: none;
+    @include text (600,28px,16px);
+    color: var(--link-color);
+    position: relative;
+}
+.header__list-item-link::after{
+    position: absolute;
+    content: ' ';
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 50%;
+    background-color: var(--link-color-hover);
+    transition: all 0.4s;
+}
+.header__list-item-link::before{
+    position: absolute;
+    content: ' ';
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    right: 50%;
+    background-color: var(--link-color-hover);
+    transition: all 0.4s;
+}
+.header__list-item-link:hover{
+    color: var(--link-color-hover);
+}
+.header__list-item-link:hover::after{
+    width: 50%;
+}
+.header__list-item-link:hover::before{
+    width: 50%;
+}
+.header__list-item-sign-in{
+    display: inline-block;
+    padding: 10px 22px 9px 25px;
+    @include text (600,24px,16px);
+    color: var(--logo-color);
+    border-radius: 4px;
+    border: 1px solid #BCD0E5;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+.header__list-item-sign-in:hover{
+    background-color: #BCD0E5;
+    color: var(--white);
+}
+.header__list-item-sign-up{
+    display: inline-block;
+    padding: 10px 23px 9px 25px;
+    border-radius: 4px;
+    background-color: #02897A;
+    border: 1px solid transparent;
+    @include text (600,24px,16px);
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+.header__list-item-sign-up:hover{
+    background-color: transparent;
+    border: 1px solid #BCD0E5;
+    color: var(--logo-color);
+}
+.header__light{
+    cursor: pointer;
+}
+
